@@ -1,0 +1,12 @@
+your-website/
++-- index.html
++-- content.json
++-- images/
+    +-- background.jpg     ? page background (optional)
+    +-- staff-1.jpg        ? staff photos
+    +-- staff-2.jpg
+    +-- staff-3.jpg
+    +-- staff-4.jpg
+    +-- unit-1.jpg         ? gallery photos
+    +-- unit-2.jpg
+    +-- unit-3.jpg

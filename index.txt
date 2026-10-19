@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>???? ?????? ?????? - ?????? ?? ????? ????????</title>
+<meta name="description" content="Hemodialysis Unit at AL Turkey Teaching Hospital. ???? ?????? ?????? ??????? ?? ????? ????????.">
+<style>
+  :root { --brand:#0b6e99; --brand-dark:#095a7e; --ink:#1f2933; --bg:#f7fafc; --muted:#52606d; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma,"Segoe UI",Arial,sans-serif;
+         color:var(--ink); background:var(--bg); line-height:1.7; }
+  body[dir="ltr"] { font-family:system-ui,"Segoe UI",Arial,sans-serif; }
+
+  body.has-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  body.has-bg::before {
+    content: "";
+    position: fixed; inset: 0;
+    background: rgba(15, 35, 50, var(--bg-overlay, .55));
+    z-index: -1;
+  }
+  body.has-bg main,
+  body.has-bg footer,
+  body.has-bg nav { position: relative; z-index: 1; }
+
+  header { background:var(--brand); color:#fff; padding:1rem 1.25rem;
+           display:flex; justify-content:space-between; align-items:center;
+           flex-wrap:wrap; gap:.5rem; position:relative; z-index:2; }
+  header h1 { margin:0; font-size:1.3rem; }
+  header .sub { font-size:.85rem; opacity:.9; display:block; font-weight:400; }
+
+  .lang-btn { background:#fff; color:var(--brand); border:none; border-radius:6px;
+              padding:.5rem 1rem; font-weight:600; cursor:pointer; font-size:.95rem; }
+  .lang-btn:hover, .lang-btn:focus { background:#e6f2f7; }
+
+  nav { background:var(--brand-dark); padding:.5rem 1.25rem; }
+  nav a { color:#fff; text-decoration:none; margin-left:1.25rem; font-size:.95rem;
+          display:inline-block; padding:.25rem 0; }
+  body[dir="ltr"] nav a { margin-left:0; margin-right:1.25rem; }
+  nav a:hover, nav a:focus { text-decoration:underline; }
+
+  main { max-width:950px; margin:0 auto; padding:1.5rem 1.25rem; }
+  section { background:#fff; border-radius:8px; padding:1.5rem 1.75rem;
+            margin-bottom:1.25rem; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  h2 { color:var(--brand); margin-top:0; }
+  h3 { color:var(--brand-dark); margin-bottom:.5rem; }
+
+  .facts { display:flex; flex-wrap:wrap; gap:1rem; margin:1rem 0; }
+  .fact { flex:1 1 180px; background:var(--bg); border-radius:6px; padding:.85rem 1rem; }
+  .fact strong { display:block; color:var(--brand); font-size:.85rem;
+                 text-transform:uppercase; letter-spacing:.03em; }
+  .fact span, .fact a { font-size:1.05rem; font-weight:600; color:var(--ink);
+                        text-decoration:none; }
+  .fact a:hover { text-decoration:underline; }
+
+  .emergency { background:#fff4e5; border-right:4px solid #d97706;
+               padding:.85rem 1rem; border-radius:4px; margin:1rem 0; }
+  body[dir="ltr"] .emergency { border-right:none; border-left:4px solid #d97706; }
+  .note { background:#e6f2f7; border-right:4px solid var(--brand);
+          padding:.85rem 1rem; border-radius:4px; margin:1rem 0; font-size:.95rem; }
+  body[dir="ltr"] .note { border-right:none; border-left:4px solid var(--brand); }
+
+  table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+  th, td { border:1px solid #d9e2ec; padding:.6rem .7rem; text-align:start; }
+  th { background:var(--brand); color:#fff; }
+  tr:nth-child(even) td { background:var(--bg); }
+
+  .updated { font-size:.8rem; color:#7b8794; margin-top:1rem; }
+  footer { text-align:center; padding:1.5rem; font-size:.85rem; color:var(--muted); }
+  ul { padding-inline-start:1.25rem; }
+
+  .map-embed { margin:1rem 0; }
+  .map-btn { display:inline-block; background:var(--brand); color:#fff;
+             text-decoration:none; padding:.7rem 1.25rem; border-radius:6px;
+             font-weight:600; }
+  .map-btn:hover, .map-btn:focus { background:var(--brand-dark); }
+
+  /* ---- GALLERY ---- */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .gallery figure {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  }
+  .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform .25s;
+  }
+  .gallery img:hover { transform: scale(1.03); }
+  .gallery figcaption {
+    padding: .6rem .75rem;
+    font-size: .9rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ---- STAFF ---- */
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .staff-card {
+    text-align: center;
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 1.25rem 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .staff-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+  .staff-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto .75rem;
+    display: block;
+    border: 3px solid var(--brand);
+    background: #e6f2f7;
+  }
+  .staff-initials {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand);
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    border: 3px solid var(--brand-dark);
+  }
+  .staff-name {
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin: 0 0 .25rem;
+    font-size: 1.05rem;
+  }
+  .staff-role {
+    font-size: .9rem;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---- NEWS ---- */
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .news-item {
+    background: var(--bg);
+    border-right: 4px solid var(--brand);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  }
+  body[dir="ltr"] .news-item {
+    border-right: none;
+    border-left: 4px solid var(--brand);
+  }
+  .news-item.urgent {
+    background: #fff4e5;
+    border-right-color: #d97706;
+    border-left-color: #d97706;
+  }
+  .news-date {
+    font-size: .85rem;
+    color: var(--muted);
+    margin: 0 0 .25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+  .news-item.urgent .news-date { color: #b45309; }
+  .news-title {
+    color: var(--brand-dark);
+    margin: 0 0 .5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .news-item.urgent .news-title { color: #92400e; }
+  .news-body {
+    margin: 0;
+    color: var(--ink);
+  }
+  .news-badge {
+    display: inline-block;
+    background: #d97706;
+    color: #fff;
+    font-size: .7rem;
+    padding: .15rem .5rem;
+    border-radius: 4px;
+    margin-inline-start: .5rem;
+    vertical-align: middle;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+
+  /* ---- LIGHTBOX ---- */
+  .lightbox {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0,0,0,.5);
+  }
+  .lightbox .close {
+    position: absolute;
+    top: 1rem; right: 1.5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    background: none; border: none;
+  }
+
+  @media (max-width:600px){
+    nav a { display:block; margin:.2rem 0 !important; }
+    header { flex-direction:column; align-items:flex-start; }
+    section { padding:1.25rem; }
+  }
+
+  .lang-en .ar { display:none; }
+  .lang-ar .en { display:none; }
+  .loading { text-align:center; padding:3rem; color:var(--muted); }
+</style>
+</head>
+<body class="lang-ar" dir="rtl">
+
+<header>
+  <h1>
+    <span class="ar" id="unitAr">???? ?????? ??????</span>
+    <span class="en" id="unitEn">Hemodialysis Unit</span>
+    <span class="sub">
+      <span class="ar" id="hospitalAr">?????? ?? ????? ????????</span>
+      <span class="en" id="hospitalEn">AL Turkey Teaching Hospital</span>
+    </span>
+  </h1>
+  <button class="lang-btn" id="langBtn" onclick="toggleLang()">English</button>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="#home"><span class="ar">????????</span><span class="en">Home</span></a>
+  <a href="#about"><span class="ar">?? ??????</span><span class="en">About</span></a>
+  <a href="#patients"><span class="ar">??????</span><span class="en">Patients</span></a>
+  <a href="#education"><span class="ar">???????</span><span class="en">Education</span></a>
+  <a href="#news"><span class="ar">???????</span><span class="en">News</span></a>
+  <a href="#staff"><span class="ar">??????</span><span class="en">Staff</span></a>
+  <a href="#gallery"><span class="ar">?????</span><span class="en">Photos</span></a>
+  <a href="#visitors"><span class="ar">??????</span><span class="en">Visitors</span></a>
+  <a href="#contact"><span class="ar">???? ???</span><span class="en">Contact</span></a>
+</nav>
+
+<main id="app">
+  <div class="loading">Loading... ???? ???????...</div>
+</main>
+
+<footer>
+  <p class="ar" id="footerAr">...</p>
+  <p class="en" id="footerEn">...</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="close" onclick="event.stopPropagation(); closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  let DATA = null;
+
+  function el(tag, attrs = {}, children = []) {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => {
+      if (k === 'class') e.className = v;
+      else if (k === 'html') e.innerHTML = v;
+      else e.setAttribute(k, v);
+    });
+    (Array.isArray(children) ? children : [children]).forEach(c => {
+      if (c == null) return;
+      e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+    });
+    return e;
+  }
+  const ar = (t) => el('span', { class: 'ar' }, t);
+  const en = (t) => el('span', { class: 'en' }, t);
+  const both = (a, b) => [ar(a), en(b)];
+  const list = (items, lang) => {
+    const ul = el('ul', { class: lang });
+    items.forEach(i => ul.appendChild(el('li', {}, i)));
+    return ul;
+  };
+  const factCard = (aLabel, eLabel, aVal, eVal) => {
+    const f = el('div', { class: 'fact' });
+    f.appendChild(el('strong', { class: 'ar' }, aLabel));
+    f.appendChild(el('strong', { class: 'en' }, eLabel));
+    f.appendChild(el('span', { class: 'ar' }, aVal));
+    f.appendChild(el('span', { class: 'en' }, eVal));
+    return f;
+  };
+  const updatedLine = () => {
+    const p = el('p', { class: 'updated' });
+    p.appendChild(ar('??? ?????: ' + DATA.meta.last_updated_ar));
+    p.appendChild(en('Last updated: ' + DATA.meta.last_updated_en));
+    return p;
+  };
+
+  function render() {
+    if (!DATA) return;
+    const m = DATA.meta;
+
+    if (m.background_image) {
+      document.body.classList.add('has-bg');
+      document.body.style.backgroundImage = 'url("' + m.background_image + '")';
+      document.body.style.setProperty('--bg-overlay', m.background_overlay || '0.55');
+    }
+
+    document.getElementById('unitAr').textContent = m.unit_ar;
+    document.getElementById('unitEn').textContent = m.unit_en;
+    document.getElementById('hospitalAr').textContent = m.hospital_ar;
+    document.getElementById('hospitalEn').textContent = m.hospital_en;
+    document.title = m.unit_ar + ' - ' + m.hospital_ar;
+    document.getElementById('footerAr').textContent = DATA.footer.text_ar;
+    document.getElementById('footerEn').textContent = DATA.footer.text_en;
+
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+
+    // ---- HOME ----
+    const home = el('section', { id: 'home' });
+    home.appendChild(el('h2', {}, both(DATA.home.title_ar, DATA.home.title_en)));
+    home.appendChild(el('p', { class: 'ar' }, DATA.home.intro_ar));
+    home.appendChild(el('p', { class: 'en' }, DATA.home.intro_en));
+    home.appendChild(el('p', { class: 'ar' }, DATA.home.more_ar));
+    home.appendChild(el('p', { class: 'en' }, DATA.home.more_en));
+
+    const facts = el('div', { class: 'facts' });
+    facts.appendChild(factCard('??????', 'Location', m.hospital_ar, m.hospital_en));
+    facts.appendChild(factCard('????? ?????', 'Working Hours', DATA.home.hours_ar, DATA.home.hours_en));
+    facts.appendChild(factCard('??????? ??????', 'Dialysis Machines', DATA.home.machines_ar, DATA.home.machines_en));
+    const phoneCard = el('div', { class: 'fact' });
+    phoneCard.appendChild(el('strong', { class: 'ar' }, '??????'));
+    phoneCard.appendChild(el('strong', { class: 'en' }, 'Phone'));
+    phoneCard.appendChild(el('a', { href: 'tel:' + m.phone1_tel, dir: 'ltr' }, m.phone1));
+    phoneCard.appendChild(el('br'));
+    phoneCard.appendChild(el('a', { href: 'tel:' + m.phone2_tel, dir: 'ltr' }, m.phone2));
+    facts.appendChild(phoneCard);
+    home.appendChild(facts);
+
+    const em = el('div', { class: 'emergency' });
+    em.appendChild(el('strong', { class: 'ar' }, '???? ??????'));
+    em.appendChild(el('strong', { class: 'en' }, 'Medical emergency?'));
+    em.appendChild(ar(' ' + DATA.home.emergency_ar));
+    em.appendChild(en(' ' + DATA.home.emergency_en));
+    home.appendChild(em);
+    home.appendChild(updatedLine());
+    app.appendChild(home);
+
+    // ---- ABOUT ----
+    const about = el('section', { id: 'about' });
+    about.appendChild(el('h2', {}, both('???? ?? ??? ?????? ??????', 'About the Unit')));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.location_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.location_en));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.intro_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.intro_en));
+    about.appendChild(el('h3', {}, both('?????? ?????', 'Unit Components')));
+    about.appendChild(list(DATA.about.components_ar, 'ar'));
+    about.appendChild(list(DATA.about.components_en, 'en'));
+    about.appendChild(el('h3', {}, both('???? ??? ????????', 'Appointment Booking')));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.booking_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.booking_en));
+    about.appendChild(el('h3', {}, both('?????? ?????? ??????', 'Unit Staff')));
+    about.appendChild(list(DATA.about.staff_ar, 'ar'));
+    about.appendChild(list(DATA.about.staff_en, 'en'));
+    about.appendChild(el('h3', {}, both('????? ??? ?????', 'How the Unit Operates')));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.operations_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.operations_en));
+    about.appendChild(el('h3', {}, both('????? ???????', 'Training Services')));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.training_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.training_en));
+    about.appendChild(el('p', { class: 'ar' }, DATA.about.closing_ar));
+    about.appendChild(el('p', { class: 'en' }, DATA.about.closing_en));
+    about.appendChild(updatedLine());
+    app.appendChild(about);
+
+    // ---- PATIENTS ----
+    const patients = el('section', { id: 'patients' });
+    patients.appendChild(el('h2', {}, both('??????', 'For Patients')));
+    patients.appendChild(el('h3', {}, both('?? ???? ????? ????? ??????', 'What to expect during a session')));
+    patients.appendChild(el('p', { class: 'ar' }, DATA.patients.expect_ar));
+    patients.appendChild(el('p', { class: 'en' }, DATA.patients.expect_en));
+    patients.appendChild(el('h3', {}, both('?? ??? ??????', 'What to bring')));
+    patients.appendChild(list(DATA.patients.bring_ar, 'ar'));
+    patients.appendChild(list(DATA.patients.bring_en, 'en'));
+    patients.appendChild(el('h3', {}, both('????? ??????', 'During your session')));
+    patients.appendChild(el('p', { class: 'ar' }, DATA.patients.during_ar));
+    patients.appendChild(el('p', { class: 'en' }, DATA.patients.during_en));
+    patients.appendChild(updatedLine());
+    app.appendChild(patients);
+
+    // ---- EDUCATION ----
+    const edu = el('section', { id: 'education' });
+    edu.appendChild(el('h2', {}, both('??????? ?????', 'Patient Education')));
+    edu.appendChild(el('p', { class: 'ar' }, DATA.education.note_ar));
+    edu.appendChild(el('p', { class: 'en' }, DATA.education.note_en));
+    edu.appendChild(list(DATA.education.items_ar, 'ar'));
+    edu.appendChild(list(DATA.education.items_en, 'en'));
+    edu.appendChild(updatedLine());
+    app.appendChild(edu);
+
+    // ---- NEWS ----
+    if (DATA.news && DATA.news.items && DATA.news.items.length) {
+      const nw = el('section', { id: 'news' });
+      nw.appendChild(el('h2', {}, both(DATA.news.title_ar, DATA.news.title_en)));
+      if (DATA.news.intro_ar) nw.appendChild(el('p', { class: 'ar' }, DATA.news.intro_ar));
+      if (DATA.news.intro_en) nw.appendChild(el('p', { class: 'en' }, DATA.news.intro_en));
+
+      const listWrap = el('div', { class: 'news-list' });
+      DATA.news.items.forEach(item => {
+        const itemEl = el('div', { class: 'news-item' + (item.urgent ? ' urgent' : '') });
+        const dateEl = el('p', { class: 'news-date' });
+        if (item.date_ar) dateEl.appendChild(ar(item.date_ar));
+        if (item.date_en) dateEl.appendChild(en(item.date_en));
+        itemEl.appendChild(dateEl);
+        const titleEl = el('h3', { class: 'news-title' });
+        if (item.title_ar) titleEl.appendChild(ar(item.title_ar));
+        if (item.title_en) titleEl.appendChild(en(item.title_en));
+        if (item.urgent) {
+          const badge = el('span', { class: 'news-badge' });
+          badge.appendChild(ar('????'));
+          badge.appendChild(en('Urgent'));
+          titleEl.appendChild(badge);
+        }
+        itemEl.appendChild(titleEl);
+        if (item.body_ar) itemEl.appendChild(el('p', { class: 'news-body ar' }, item.body_ar));
+        if (item.body_en) itemEl.appendChild(el('p', { class: 'news-body en' }, item.body_en));
+        listWrap.appendChild(itemEl);
+      });
+      nw.appendChild(listWrap);
+      nw.appendChild(updatedLine());
+      app.appendChild(nw);
+    }
+
+    // ---- STAFF ----
+    if (DATA.staff && DATA.staff.members && DATA.staff.members.length) {
+      const st = el('section', { id: 'staff' });
+      st.appendChild(el('h2', {}, both(DATA.staff.title_ar, DATA.staff.title_en)));
+      if (DATA.staff.intro_ar) st.appendChild(el('p', { class: 'ar' }, DATA.staff.intro_ar));
+      if (DATA.staff.intro_en) st.appendChild(el('p', { class: 'en' }, DATA.staff.intro_en));
+
+      const grid = el('div', { class: 'staff-grid' });
+      DATA.staff.members.forEach(member => {
+        const card = el('div', { class: 'staff-card' });
+        if (member.photo) {
+          card.appendChild(el('img', {
+            class: 'staff-photo',
+            src: member.photo,
+            alt: member.name_en || member.name_ar || '',
+            loading: 'lazy'
+          }));
+        } else {
+          const initials = (member.name_en || member.name_ar || '?')
+            .trim().split(/\s+/).slice(0, 2)
+            .map(w => w[0]).join('').toUpperCase();
+          card.appendChild(el('div', { class: 'staff-initials' }, initials));
+        }
+        const name = el('p', { class: 'staff-name' });
+        if (member.name_ar) name.appendChild(ar(member.name_ar));
+        if (member.name_en) name.appendChild(en(member.name_en));
+        card.appendChild(name);
+        const role = el('p', { class: 'staff-role' });
+        if (member.role_ar) role.appendChild(ar(member.role_ar));
+        if (member.role_en) role.appendChild(en(member.role_en));
+        card.appendChild(role);
+        grid.appendChild(card);
+      });
+      st.appendChild(grid);
+      st.appendChild(updatedLine());
+      app.appendChild(st);
+    }
+
+    // ---- GALLERY ----
+    if (DATA.gallery && DATA.gallery.items && DATA.gallery.items.length) {
+      const gal = el('section', { id: 'gallery' });
+      gal.appendChild(el('h2', {}, both(DATA.gallery.title_ar, DATA.gallery.title_en)));
+      if (DATA.gallery.intro_ar) gal.appendChild(el('p', { class: 'ar' }, DATA.gallery.intro_ar));
+      if (DATA.gallery.intro_en) gal.appendChild(el('p', { class: 'en' }, DATA.gallery.intro_en));
+
+      const grid = el('div', { class: 'gallery' });
+      DATA.gallery.items.forEach(item => {
+        const fig = el('figure');
+        const img = el('img', {
+          src: item.src,
+          alt: item.alt_en || item.alt_ar || '',
+          loading: 'lazy',
+          onclick: 'openLightbox("' + item.src + '", "' + (item.alt_en || '').replace(/"/g, '&quot;') + '")'
+        });
+        fig.appendChild(img);
+        const cap = el('figcaption');
+        if (item.alt_ar) cap.appendChild(ar(item.alt_ar));
+        if (item.alt_en) cap.appendChild(en(item.alt_en));
+        fig.appendChild(cap);
+        grid.appendChild(fig);
+      });
+      gal.appendChild(grid);
+      app.appendChild(gal);
+    }
+
+    // ---- VISITORS ----
+    const vis = el('section', { id: 'visitors' });
+    vis.appendChild(el('h2', {}, both('????? ??????', 'Visitor Policy')));
+    const meta1 = el('p');
+    meta1.appendChild(el('strong', { class: 'ar' }, '??? ???????:'));
+    meta1.appendChild(el('strong', { class: 'en' }, 'Policy No.:'));
+    meta1.appendChild(el('span', {}, ' HD-POL-002'));
+    meta1.appendChild(el('br'));
+    meta1.appendChild(el('strong', { class: 'ar' }, '????? ???????:'));
+    meta1.appendChild(el('strong', { class: 'en' }, 'Effective:'));
+    meta1.appendChild(ar(' ' + m.last_updated_ar));
+    meta1.appendChild(en(' ' + m.last_updated_en));
+    vis.appendChild(meta1);
+
+    const noteBox = el('div', { class: 'note' });
+    noteBox.appendChild(ar(DATA.visitors.note_ar));
+    noteBox.appendChild(en(DATA.visitors.note_en));
+    vis.appendChild(noteBox);
+
+    vis.appendChild(el('h3', {}, both('????????? ??????', 'General Guidelines')));
+    vis.appendChild(list(DATA.visitors.rules_ar, 'ar'));
+    vis.appendChild(list(DATA.visitors.rules_en, 'en'));
+
+    vis.appendChild(el('h3', {}, both('????? ??????? ??? ??????', 'Visiting Hours by Session')));
+    const tbl = el('table');
+    const thead = el('thead');
+    const hr = el('tr');
+    ['??????|Session', '????? ??????|Session Hours', '????? ??????? ??????? ???|Permitted Visiting', '??????? ??????? (?? ????)|Restricted (No Visitors)'].forEach(pair => {
+      const parts = pair.split('|');
+      hr.appendChild(el('th', {}, both(parts[0], parts[1])));
+    });
+    thead.appendChild(hr);
+    tbl.appendChild(thead);
+    const tbody = el('tbody');
+    [['session1_ar', 'session1_en'], ['session2_ar', 'session2_en']].forEach(([ak, ek]) => {
+      const tr = el('tr');
+      const a = DATA.visitors[ak], e = DATA.visitors[ek];
+      tr.appendChild(el('td', {}, both(a.name, e.name)));
+      tr.appendChild(el('td', {}, both(a.hours, e.hours)));
+      const cell = el('td');
+      cell.appendChild(el('strong', { class: 'ar' }, a.permitted));
+      cell.appendChild(el('strong', { class: 'en' }, e.permitted));
+      tr.appendChild(cell);
+      tr.appendChild(el('td', {}, both(a.restricted, e.restricted)));
+      tbody.appendChild(tr);
+    });
+    tbl.appendChild(tbody);
+    vis.appendChild(tbl);
+    vis.appendChild(el('p', { class: 'ar' }, DATA.visitors.closing_ar));
+    vis.appendChild(el('p', { class: 'en' }, DATA.visitors.closing_en));
+    vis.appendChild(updatedLine());
+    app.appendChild(vis);
+
+    // ---- CONTACT ----
+    const ct = el('section', { id: 'contact' });
+    ct.appendChild(el('h2', {}, both('??????? ???????', 'Contact & Location')));
+    const c = DATA.contact;
+    const info = el('p');
+    info.appendChild(el('strong', { class: 'ar' }, '????????:'));
+    info.appendChild(el('strong', { class: 'en' }, 'Hospital:'));
+    info.appendChild(ar(' ' + m.hospital_ar + ' (???????? ??????)'));
+    info.appendChild(en(' ' + m.hospital_en + ' (Turkish Hospital)'));
+    info.appendChild(el('br'));
+    info.appendChild(el('strong', { class: 'ar' }, '?????:'));
+    info.appendChild(el('strong', { class: 'en' }, 'Department:'));
+    info.appendChild(ar(' ' + c.department_ar));
+    info.appendChild(en(' ' + c.department_en));
+    info.appendChild(el('br'));
+    info.appendChild(el('strong', { class: 'ar' }, '????? ?????:'));
+    info.appendChild(el('strong', { class: 'en' }, 'Hours:'));
+    info.appendChild(ar(' ' + c.hours_ar));
+    info.appendChild(en(' ' + c.hours_en));
+    info.appendChild(el('br'));
+    info.appendChild(el('strong', { class: 'ar' }, '??????:'));
+    info.appendChild(el('strong', { class: 'en' }, 'Phone:'));
+    info.appendChild(el('a', { href: 'tel:' + m.phone1_tel, dir: 'ltr' }, m.phone1));
+    info.appendChild(document.createTextNode(' · '));
+    info.appendChild(el('a', { href: 'tel:' + m.phone2_tel, dir: 'ltr' }, m.phone2));
+    info.appendChild(el('br'));
+    info.appendChild(el('strong', { class: 'ar' }, '???????:'));
+    info.appendChild(el('strong', { class: 'en' }, 'Address:'));
+    info.appendChild(ar(' ' + m.address_ar));
+    info.appendChild(en(' ' + m.address_en));
+    ct.appendChild(info);
+
+    const mapWrap = el('div', { class: 'map-embed' });
+    mapWrap.appendChild(el('iframe', {
+      title: 'Hospital map',
+      src: 'https://maps.google.com/maps?q=' + m.map_query + '&z=16&output=embed&hl=ar',
+      style: 'border:1px solid #d9e2ec; border-radius:8px; width:100%; height:320px;',
+      loading: 'lazy',
+      referrerpolicy: 'no-referrer-when-downgrade'
+    }));
+    ct.appendChild(mapWrap);
+
+    const mapBtnP = el('p', { style: 'text-align:center; margin-top:.75rem;' });
+    const mapBtn = el('a', {
+      href: 'https://www.google.com/maps?q=' + m.map_query,
+      target: '_blank', rel: 'noopener', class: 'map-btn'
+    });
+    mapBtn.appendChild(ar('?? ???? ?????? ??? ????? Google'));
+    mapBtn.appendChild(en('?? Open location in Google Maps'));
+    mapBtnP.appendChild(mapBtn);
+    ct.appendChild(mapBtnP);
+
+    ct.appendChild(el('p', { class: 'ar' }, c.directions_ar));
+    ct.appendChild(el('p', { class: 'en' }, c.directions_en));
+    ct.appendChild(el('p', { class: 'ar' }, c.privacy_ar));
+    ct.appendChild(el('p', { class: 'en' }, c.privacy_en));
+    ct.appendChild(updatedLine());
+    app.appendChild(ct);
+  }
+
+  function openLightbox(src, alt) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightboxImg').alt = alt || '';
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  function toggleLang() {
+    const body = document.body;
+    const btn = document.getElementById('langBtn');
+    if (body.classList.contains('lang-ar')) {
+      body.classList.remove('lang-ar');
+      body.classList.add('lang-en');
+      body.setAttribute('dir', 'ltr');
+      body.setAttribute('lang', 'en');
+      btn.textContent = '???????';
+      localStorage.setItem('hdLang', 'en');
+    } else {
+      body.classList.remove('lang-en');
+      body.classList.add('lang-ar');
+      body.setAttribute('dir', 'rtl');
+      body.setAttribute('lang', 'ar');
+      btn.textContent = 'English';
+      localStorage.setItem('hdLang', 'ar');
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('hdLang') === 'en') toggleLang();
+    fetch('content.json')
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(data => { DATA = data; render(); })
+      .catch(err => {
+        document.getElementById('app').innerHTML =
+          '<div class="loading">?? ?? ??? ????? ???????. ???? ?? ???? ??? content.json ????? index.html.<br>' +
+          'Could not load content. Make sure content.json is next to index.html.<br>' +
+          '<small>' + err.message + '</small></div>';
+      });
+  });
+</script>
+
+</body>
+</html>
